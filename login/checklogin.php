@@ -9,9 +9,9 @@ require 'includes/functions.php';
 $username = $_POST['myusername'];
 $password = $_POST['mypassword'];
 
-// To protect MySQL injection
-$username = stripslashes($username);
-$password = stripslashes($password);
+// To protect MySQL injection * Na verdade o que protege é o addsalashes ou addcslashes. O stripslashes desfaz o addslashes
+$username = addslashes($username);
+$password = addslashes($password);
 
 $response = '';
 $loginCtl = new LoginForm;
