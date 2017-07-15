@@ -13,6 +13,10 @@ $password = $_POST['mypassword'];
 $username = addslashes($username);
 $password = addslashes($password);
 
+//or
+//$username = mysql_real_escape_string($username);
+//$password = mysql_real_escape_string($password);
+
 $response = '';
 $loginCtl = new LoginForm;
 $conf = new GlobalConf;
